@@ -1,6 +1,6 @@
 ---
 title: "Guides de stage Master BOE"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
