@@ -1,0 +1,126 @@
+---
+title: "Guides de mémoire Master BOE"
+output: 
+  pdf_document: 
+    number_sections: true
+toc: true
+toc_depth: 2
+toc-title: "Contenu"
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(lubridate)
+```
+
+```{r, echo=FALSE}
+#establish academic year and year of departure to stage
+month <- month(today())
+year <- year(today())
+academic_year_1 <- ifelse(month < 9, year-1, year)
+academic_year_2 <- ifelse(month < 9, year, year+1)
+year_of_departure <- academic_year_2 + 1
+#function to get last friday of some month and year
+#day_month = last day of the month of which we want to know last friday
+#year = year for which we want to know this
+get_last_friday <- function(month="10", year=2023){
+  last_of_month <- rollforward(dmy(paste("01", month, year,sep="")))
+  tosubtr <- ifelse(wday(last_of_month)>=5,
+                    wday(last_of_month)-5,
+                    wday(last_of_month)+1)
+  last_friday_of_month <- last_of_month %m-% as.period(tosubtr, unit="day")
+   convert_to_format(last_friday_of_month)
+}
+#convert to proper date format for printing
+convert_to_format <- function(day){
+  paste(day(day),month(day), year(day), sep="/")
+}
+
+```
+
+```{css, echo=FALSE}
+\hypersetup{colorlinks=true, linkcolor=blue}
+```
+
+# Introduction
+
+Cette note est destinée aux étudiants en master en biologie des organismes et écologie ainsi qu'aux promoteurs, co-promoteurs et membres des jurys de mémoire. Il vise à les informer des dispositions réglementaires et des pratiques en la matière.
+Abréviations utilisées : UCL : UCLouvain ; UN : Université de Namur ;  BIOL : École de biologie (UCL) ; CP : la commission de programme BOE, qui gère le programme de master en biologie des organismes et écologie ; M1, M2 : premier et deuxième bloc du master ; Q1, Q2 : premier et second quadrimestre ; BDIV : Centre de recherche sur la biodiversité (UCL) ; URBE : unité de recherche en biologie environnementale et évolutive (UN).
+
+# 	Objectif du mémoire
+
+Le mémoire doit montrer l'aptitude de son auteur à réaliser et exposer correctement les résultats d'un travail de recherche personnel, objectif et méthodique, dont la qualité n'est pas nécessairement liée à l'étendue. Le travail du mémoire doit amener l'étudiant à:
+
+*   participer activement à la conception d'un projet de recherche (compréhension du problème, état de la question, planification, imagination);
+*   participer activement à l'obtention des données nécessaires et pertinentes (mises au point technique, soin, organisation);
+*   analyser, confronter et interpréter les résultats obtenus (recherche de méthodes adéquates, critique, références à la littérature scientifique);
+*   réaliser un rapport circonstancié de sa recherche (le texte du mémoire : règles et art de la rédaction scientifique);
+*   exposer et défendre son travail en public en un temps limité (synthèse, mise en valeur);
+*   participer activement à la vie scientifique d’une communauté de chercheurs.
+
+# 	Période du mémoire
+
+Le mémoire débute au deuxième quadrimestre du premier bloc de master (M1-Q2) et se poursuit au premier quadrimestre du deuxième bloc de master (M2-Q1). L'évaluation du mémoire se fera en deux temps : une évaluation intermédiaire au terme du M1-Q2, l' initiation à la recherche scientifique LBOE2197 (UCL)/SBOE M197 (UN), et une évaluation finale au terme du M2-Q1, le mémoire : LBOE2297/SBOE M297. Attention : l'initiation à la recherche scientifique (LBOE2197) est un pré-requis au mémoire (LBOE2297). Ce dernier ne peut être présenté avant d'avoir validé les crédits de l'initiation à la recherche scientifique. 
+
+# Organisation du mémoire
+
+Pour la réalisation de son mémoire, chaque étudiant est accueilli au sein d'un laboratoire qui lui offre l'appui logistique, matériel, scientifique et humain nécessaire. Le laboratoire d'accueil fait partie du centre de recherche sur la biodiversité (BDIV) ou de l’école de biologie (BIOL) de l'UCL, ou bien d'un laboratoire à l'URBE à l'UN. Un autre laboratoire, aussi hors des deux universités et même hors Belgique, peut cependant être proposé par un étudiant. Dans ce cas, la proposition doit être justifiée et avalisée par un co-promoteur, membre de jury du master BOE.
+
+La guidance scientifique du mémoire est assurée par un promoteur ou deux co-promoteurs qui veillent à la bonne réalisation des travaux. Le promoteur ou les deux co-promoteurs sont soit académiques, soit scientifiques définitifs, soit porteurs d'un diplôme de docteur avec thèse (sous réserve, dans ce dernier cas, de l’accord du responsable de leur groupe de recherche). Le promoteur ou au moins un des co-promoteurs doit être:
+
+*   soit impliqué dans un enseignement du tronc commun ou des options en master BOE ;
+*   soit membre de BDIV, BIOL ou d'URBE jusqu'à, au moins, la date de présentation publique du mémoire ;
+*   dans le cas contraire, un co-promoteur, membre de jury du master BOE, doit être ajouté. Ce co-promoteur doit être suffisamment proche de la discipline du sujet de mémoire pour en comprendre les enjeux. Son rôle ne se limite pas à une simple fonction administrative. Il assiste à la présentation en anglais (LBOE2113) si le promoteur principal ne peut pas y assister, participe à l’évaluation de l'initiation à la recherche scientifique (LBOE2197) et fait partie du jury du mémoire (LBOE2297).
+
+Les promoteurs peuvent encadrer jusqu'à trois mémorants du master BOE la même année. Ce nombre peut être dépassé, notamment si des mémoires sont encadrés par deux co-promoteurs ou si un encadrant fait partie de l'équipe d'encadrement. Dans ce cas, la disponibilité d'un encadrement suffisant sera vérifiée par le CP du master BOE. Un encadrant peut être indiqué sur le formulaire de proposition de sujet de mémoire, il s'agit généralement d'un doctorant qui fait de la recherche dans le domaine du sujet de mémoire sous la direction du promoteur, et qui assure l'encadrement journalier. L'encadrant fait partie de l'équipe d'encadrement et participe activement à l'évaluation des deux parties du mémoire. Une équipe d'encadrement peut donc consister en 1 promoteur, 2 co-promoteurs, 1 promoteur + encadrant ou 2 co-promoteurs + encadrant. Dans la suite du texte le mot ``promoteur'' signifie ``l’équipe d'encadrement''. 
+
+# Choix du sujet de mémoire
+
+xxx
+
+# Première partie du mémoire (M1, Q2)
+
+Le travail pour le mémoire commence en M1, Q2 avec la préparation du travail pratique du mémoire. Cette préparation consiste en une étude de la littérature scientifique pertinente, la formulation des objectifs et hypothèses spécifiques et souvent le début du travail pratique lui-même, en fonction du calendrier des expériences/observations.
+
+## Présentation en anglais
+
+Les étudiants suivent un cours du tronc commun, « Scientific and professional communication in English » (LBOE2113 ; 3 crédits) en M1-Q2 qui les aide à faire une présentation orale sur un sujet scientifique. Les étudiants préparent une présentation en anglais sur les objectifs de leur mémoire, et ces présentations ont lieu au début de la session de juin de M1, à l'institution où l'étudiant fait son mémoire (ou celle du co-promoteur si le mémoire se fait à l'extérieur). Pendant la présentation, le promoteur est présent et il pose des questions en anglais après, auxquelles l'étudiant doit répondre en anglais. L'évaluation du contenu scientifique de cette présentation et la réponse aux questions sera incluse dans la cote remise par le promoteur pour le mémoire – première partie. La note pour le cours LBOE2113 est entièrement attribuée par le maître de langues, le promoteur n'y intervient pas. Consultez le cahier des charges pour plus de détails sur le contenu de ce cours.
+
+## L’évaluation de l’Initiation à la recherche scientifique
+
+L'évaluation de cette première partie (LBOE2197; 8 crédits) a lieu à la session de juin de M1. Elle portera sur un travail écrit remis par l'étudiant consistant essentiellement en une (courte) synthèse de la littérature, l'énoncé du ou des objectifs du travail ainsi que les hypothèses pour le travail de terrain ou de laboratoire. Ce travail peut être intégré comme introduction dans le manuscrit du mémoire (LBOE2297) remis en M2. Dans la version finale du mémoire, cette introduction pourra être remaniée si nécessaire par rapport à la version de l'Initiation à la recherche scientifique, par exemple si le sujet du mémoire a été réorienté pendant le travail pratique. Le travail devra être déposé chez le promoteur au plus tard le jour d’ouverture de la session de juin de M1. L'évaluation se fait par le promoteur sur base d'une grille d'évaluation Excel, téléchargeable sur le site web de l'École de Biologie UCL. Le promoteur envoie la grille sous forme électronique à \href{renate.wesselingh@uclouvain.be}{Renate Wesselingh}, au plus tard le lundi avant les délibérations de juin. Après lecture du travail, le promoteur veillera à expliquer à l'étudiant comment il peut améliorer la qualité de son travail. L'évaluation de l'Initiation à la recherche scientifique est donc aussi formative. 
+
+Il est techniquement possible de postposer l'évaluation du travail et de le faire en session de septembre plutôt qu'en juin, mais il ne faut toutefois pas oublier que la recherche bibliographique et la formulation des objectifs sont indispensables comme préparation aux observations et expériences, et qu'il ne faut certainement pas commencer le travail pratique sans aucune préparation théorique. Avis aux promoteurs : il est important de demander à l'étudiant durant M1-Q2 de présenter l'avancement de son travail, p. ex. à l'occasion de séminaires internes de son laboratoire, et ainsi le stimuler de compléter le travail en juin.
+
+## La délibération de M1
+
+L'évaluation du travail ``Initiation de la recherche scientifique'' intervient dans le calcul de la moyenne de l'étudiant en M1. En cas d'échec, l'étudiant doit représenter une nouvelle version de son travail durant M1 (session de septembre, la date limite de dépôt est le 15/08). L'étudiant a tout intérêt à produire un travail conséquent, ce qui ne va pas seulement alléger le travail de rédaction pour le mémoire, mais aussi bien le préparer pour la partie pratique. Il est évident que la partie ``Initiation à la recherche scientifique'' doit être réussie pour pouvoir continuer la partie ``Mémoire''. 
+
+# Deuxième partie du mémoire
+
+## Travail
+
+Le travail pratique du mémoire (observations, expériences, calculs) continue très probablement aussi pendant les congés universitaires, en fonction du sujet choisi. La rédaction du mémoire continue avec la description des méthodes. L'analyse des résultats et la rédaction de cette partie du mémoire plus la discussion commencent autour du début de M2, pour se terminer en décembre, à la fin du Q1 ; à ce moment, le mémoire doit en principe être finalisé pour la défense en janvier de M2. Les promoteurs sont donc invités à ajuster leurs exigences et à réunir les conditions nécessaires pour que cette échéance puisse être respectée. Dans le cas où l'étudiant ne réussit pas à terminer la rédaction à temps, la défense sera d'office postposée à la troisième session (août-septembre du M2), sauf si l'étudiant réussit à finaliser et imprimer son mémoire dans sa version définitive avant le début du Q2.
+
+L'étudiant doit avoir l'autorisation de son promoteur pour pouvoir déposer son mémoire. Le mémoire doit être déposé au plus tard le premier jour de la session des examens. Seul le président ou secrétaire du jury du master BOE est habilité à apprécier la force majeure responsable d'un dépôt tardif. Déposer le mémoire est fait comme suit : 
+
+*   Dépôt sur le site DIAL.mem de l’UCL, au plus tard à 23h59 le 05/01 (session janvier) ou le 15/08 (session septembre), en suivant scrupuleusement les instructions \href{https://dial.uclouvain.be/memoire/ucl/fr/submit}{sur DIAL.mem} 
+*   L'étudiant envoie soit le lien obtenu via DIAL.mem, soit un exemplaire en format pdf à chacun des membres de son jury de mémoire, qui doivent avoir reçu le mémoire au moins 2 semaines avant la défense. Les membres du jury peuvent demander un exemplaire en version papier.
+*  Les étudiants qui réalisent leur mémoire à l'UNamur doivent déposer leur mémoire à la BUMP via \href{ https://www.unamur.be/bump/depot-memoire}{ce lien}.
+
+L'évaluation du mémoire s'opère sur la base du travail écrit, d'une présentation orale suivie d'une défense évaluée par un jury et de l'évaluation des prestations de l'étudiant pendant l'année par le promoteur (sur base de la grille d'évaluation finale, disponible sur \href{htttps://masterboe.be}{masterboe.be}). Cette grille est en principe confidentielle et son contenu n'est pas communiqué à l'étudiant, mais il peut toujours demander des explications quant à la note finale à son promoteur.
+
+## Evaluation
+
+La composition du jury est proposée de commun accord par le promoteur et l'étudiant et approuvée par le CP du master BOE. Le formulaire en ligne sur le site masterboe dans l'espace étudiants prévu à cet effet doit être remis au plus tard le 01/12 (``Composition_jury_mémoire_M2_BOE''). 
+Le jury de mémoire comporte de quatre à cinq membres. Le promoteur et le co-promoteur en sont d'office membres. Tout membre du jury doit être porteur d'un titre universitaire et doit avoir la compétence requise pour juger tout ou partie du travail présenté.
+
+Le jury comprend:
+
+*   au moins deux membres de BDIV, de BIOL ou de l'URBE ;
+*   trois membres non impliqués dans la réalisation du mémoire.
+Les trois membres non-impliqués lisent le document écrit et donnent une note pour ce travail. Ils posent des questions après la présentation orale pour évaluer la connaissance de l'étudiant sur le sujet en général. Ils participent à la délibération après la présentation pour établir des notes pour la présentation et la réponse aux questions. L'équipe d'encadrement donne une évaluation du travail de l'étudiant pendant l'année, une note collective pour le travail écrit et participe aux délibérations.
+Si le jury comprend des experts extérieurs, le promoteur est invité à leur communiquer préalablement les règles en matière d'évaluation ainsi que le déroulement de la défense orale (voir aussi ci-après).
+
+
