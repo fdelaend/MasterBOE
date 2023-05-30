@@ -9,40 +9,60 @@ toc-title: "Contenu"
 urlcolor: blue
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(lubridate)
+```
+
+```{r, echo=FALSE}
+#establish academic year and year of departure to stage
+month <- month(today())
+year <- year(today())
+academic_year_1 <- ifelse(month < 9, year-1, year)
+academic_year_2 <- ifelse(month < 9, year, year+1)
+year_of_departure <- academic_year_2 + 1
+#function to get last friday of some month and year
+#day_month = last day of the month of which we want to know last friday
+#year = year for which we want to know this
+get_last_friday <- function(month="10", year=2023){
+  last_of_month <- rollforward(dmy(paste("01", month, year,sep="")))
+  tosubtr <- ifelse(wday(last_of_month)>=5,
+                    wday(last_of_month)-5,
+                    wday(last_of_month)+1)
+  last_friday_of_month <- last_of_month %m-% as.period(tosubtr, unit="day")
+   convert_to_format(last_friday_of_month)
+}
+#convert to proper date format for printing
+convert_to_format <- function(day){
+  paste(day(day),month(day), year(day), sep="/")
+}
+
+```
+
 ```{css, echo=FALSE}
 \hypersetup{colorlinks=true, linkcolor=blue}
 ```
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(lubridate)
-month <- month(today())
-year <- year(today())
-academic_year <- ifelse(month < 9, paste(year-1,"-",year),
-                        paste(year,"-",year+1))
-```
-
 # Introduction
 
-Ce guide est destiné aux étudiants en master en biologie des organismes et écologie (BOE). Il reprend les modalités et les dates limites du stage qui est réalisé en deuxième année.
-Abréviations utilisées : M1, M2 : premier et second bloc annuel du master ; Q1, Q2 : premier et second quadrimestre.
+Ce guide pour l'année académique `r paste(academic_year_1, academic_year_2, sep="-")` est destiné aux étudiants en master en biologie des organismes et écologie (BOE). Il reprend les modalités et les dates limites du stage qui est réalisé en deuxième année du master. Abréviations utilisées : M1, M2 : premier et second année du master ; Q1, Q2 : premier et second quadrimestre.
 
 # Rappels
 
 Le master BOE est un programme de 120 crédits minimum à réaliser sur deux années. Il est co-organisé par l'Université de Louvain (UCLouvain) et l'Université de Namur (UNamur). Depuis la rentrée 2017- 2018, l'UCLouvain est l'Université de référence. Cela implique que tous les étudiants doivent s'inscrire à l'UCLouvain et qu'ils doivent suivre les règles de l'UCLouvain quant à l'octroi de bourses de voyage de type Erasmus.
-
-Pour la gestion des stages, le partage des tâches entre les deux universités se fait de la façon suivante :
-\begin{itemize}
-  \item La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mobility.sciences@unamur.be}{Mme Carole Payen} 
-  \item L'interface pour la gestion des bourses de mobilité est gérée par l'UCLouvain, par  \href{aloysia.stephenne@uclouvain.be}{Mme Aloysia Stephenne} (qui reçoit les informations directement de Mme Payen, une fois toute la sélection des projets et lieux de stages est terminée)
-\end{itemize}
 
 Les étudiants doivent choisir une des deux finalités du master : approfondie ou didactique. Cette dernière concerne des étudiants désirant enseigner dans le secondaire supérieur à la fin de leur master. Ils doivent réaliser des stages dans les écoles et ne sont pas concernés par le présent guide. Les étudiants en finalité approfondie doivent réaliser un stage de recherche ou professionnel en M2, Q2, comptant pour 28 crédits. Avec le cours de projet professionnel (2 crédits), ils représentent ensemble la totalité des 30 crédits propres à la finalité choisie. Le coordinateur du stage reste une personne de contact privilégiée pour tout problème rencontré par l'étudiant pendant son stage.
 
 # Ce qu'il faut savoir du stage
 
 ## Personnes impliquées et responsabilités
+
+Pour la gestion administrative des stages, le partage des tâches entre les deux universités se fait de la façon suivante :
+
+\begin{itemize}
+  \item La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mobility.sciences@unamur.be}{Mme Carole Payen}. Téléphone: 081/72 31 24. 
+  \item L'interface pour la gestion des bourses de mobilité est gérée par l'UCLouvain, par  \href{aloysia.stephenne@uclouvain.be}{Mme Aloysia Stephenne} (qui reçoit les informations directement de Mme Payen, une fois toute la sélection des projets et lieux de stages est terminée)
+\end{itemize}
 
 D'un point de vue scientifique, les personnes suivantes sont directement impliquées par le stage:
 
@@ -113,7 +133,7 @@ Une fois un stage potentiel identifié, l'étudiant prend contact avec les respo
 
 # Proposition de stage et démarche
 
-Le sujet du stage doit être en lien avec le master BOE. On attend de l'étudiant qu'il s'insère dans un milieu professionnel, qu'il y mène un travail de biologiste en situation réelle, conjointement à ses collègues et impliquant une prise de responsabilité au sein de la structure d'accueil. Lorsque l'étudiant a reçu une réponse positive de son maître de stage, il doit contacter \href{frederik.delaender@unamur.be}{Frederik De Laender} par mail pour leur faire part du lieu et du sujet proposé. Si Frederik De Laender donne son accord, l'étudiant peut encoder son choix de stage sur le formulaire dont le lien se trouve sur le site \href{https://masterboe.be}{masterboe.be} (section ``ESPACE ÉTUDIANTS''). A ce moment, les démarches administratives commencent via le coordinateur du stage. Ce dernier prendra contact avec les personnes ressources des organisations d'accueil afin d'effectuer les démarches nécessaires. L'étudiant peut être contacté par le coordinateur des stages pendant cette période.
+Le sujet du stage doit être en lien avec le master BOE. On attend de l'étudiant qu'il s'insère dans un milieu professionnel, qu'il y mène un travail de biologiste en situation réelle, conjointement à ses collègues et impliquant une prise de responsabilité au sein de la structure d'accueil. Lorsque l'étudiant a reçu une réponse positive de son maître de stage, il doit contacter \href{frederik.delaender@unamur.be}{Frederik De Laender} par mail pour leur faire part du lieu et du sujet proposé. Si Frederik De Laender donne son accord, l'étudiant peut encoder son choix de stage sur le formulaire dont le lien se trouve sur le site \href{https://masterboe.be}{masterboe.be} (section ``ESPACE ÉTUDIANTS''). Cette encodage par l'étudiants est l'introduction officielle pour l'obtention d'une bourse et déclenche la rédaction de la convention de stage. A ce moment, les démarches administratives commencent via le coordinateur du stage. Ce dernier prendra contact avec les personnes ressources des organisations d'accueil afin d'effectuer les démarches nécessaires. L'étudiant peut être contacté par le coordinateur des stages pendant cette période. Une fois que les conventions de stage sont rédigées, les étudiants les recevront de la part de Mme Payen. Un résumé du timeline est inclus à la fin de ce document. 
 
 # Quelles bourses obtenir ?
 
@@ -121,16 +141,30 @@ Il est très important que l'étudiant introduise une demande d'aide financière
 
 ## En Belgique
 
-```{r, echo=FALSE}
-lastoct <- dmy(paste("3110", year(today()),sep=""))
-tosubtr <- ifelse(wday(lastoct)>=5, wday(lastoct)-5, wday(lastoct)+2)
-lastfridayokt <- lastoct %m-% as.period(tosubtr, unit="day")
-lastfridayokt <- paste(day(lastfridayokt),month(lastfridayokt),
-                       year(lastfridayokt), sep="/")
-```
-
-L'introduction officielle pour l'obtention une bourse et pour commencer la rédaction de la convention de stage se fait simplement par remplir le formulaire mentionné dans la section [Proposition de stage et démarche]. Pour ceux désirant partir en Belgique, ce formulaire doit être rempli pour le dernier vendredi d'octobre en M2 (DATE: `r lastfridayokt`). Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour le deuxième vendredi de septembre (en M2), en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
+Pour ceux désirant partir en Belgique, ce formulaire doit être rempli pour le dernier vendredi d'octobre en M2 (DATE: `r get_last_friday(month="10", year=academic_year_2)`). Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (DATE: `r get_last_friday(month="09", year=academic_year_2)`), en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
 
 Certaines industries proposent une intervention dans les frais de déplacement (à négocier au cas par cas, après avoir été accepté comme stagiaire).
+
+## En Europe
+
+Pour ceux désirant partir en Europe, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (DATE: `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(2))`). 
+
+Pour des stages en Europe, il y a une intervention possible du programme Erasmus + (« Bourse- stage »). Les montants des bourses tiennent compte du fait que l’étudiant soit ou non allocataire d'une bourse d'études de la communauté Française. Les montants des bourses sont publiés sur  \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{cette page}.
+
+Si les bourses sont demandées dans les délais fixés, elles sont de manière générale toujours octroyées. Dans le rare cas contraire, les étudiants en seront informés. 
+
+## Hors Europe
+
+Pour ceux qui désirent partir hors Europe, le formulaire doit être rempli au plus tard le dernier vendredi d’avril de l’année précédant le départ en stage (donc, en M1: DATE: `r get_last_friday(month="04", year=academic_year_2)`). De plus amples informations peuvent être demandés à Mme Payen, voir [Personnes impliquées et responsabilités] et peuvent aussi être trouvées sur \href{https://uclouvain.be/17574.html}{ce site}.  
+
+Pour des stages hors Europe, il y a une bourse institutionnelle (BMI), complétée du FAME. Les montants appliqués sont également précisés \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{ici}.   
+
+Si les bourses sont demandées dans les délais fixés, elles sont de manière générale toujours octroyées. Dans le rare cas contraire, les étudiants en seront informés. 
+
+Si un étudiant veut changer de destination après l’introduction de son dossier auprès Mme Payen, voici les possibilités : 
+\begin{itemize}
+  \item Une destination EU ne peut pas être transformée en non-EU ;
+  \item Une destination non-EU peut être transformée en destination EU, si l'information est donnée avant la deadline pour les introductions de demandes de bourses pour les destinations EU (voir timeline) ;
+\end{itemize}
 
 
