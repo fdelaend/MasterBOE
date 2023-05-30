@@ -1,13 +1,136 @@
 ---
 title: "Guides de stage Master BOE"
-output: pdf_document
+output: 
+  pdf_document: 
+    number_sections: true
+toc: true
+toc_depth: 2
+toc-title: "Contenu"
+urlcolor: blue
 ---
+
+```{css, echo=FALSE}
+\hypersetup{colorlinks=true, linkcolor=blue}
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(lubridate)
+month <- month(today())
+year <- year(today())
+academic_year <- ifelse(month < 9, paste(year-1,"-",year),
+                        paste(year,"-",year+1))
 ```
 
 # Introduction
 
-Ceci est un test. A voir si cela lui est égal.      
+Ce guide est destiné aux étudiants en master en biologie des organismes et écologie (BOE). Il reprend les modalités et les dates limites du stage qui est réalisé en deuxième année.
+Abréviations utilisées : M1, M2 : premier et second bloc annuel du master ; Q1, Q2 : premier et second quadrimestre.
+
+# Rappels
+
+Le master BOE est un programme de 120 crédits minimum à réaliser sur deux années. Il est co-organisé par l'Université de Louvain (UCLouvain) et l'Université de Namur (UNamur). Depuis la rentrée 2017- 2018, l'UCLouvain est l'Université de référence. Cela implique que tous les étudiants doivent s'inscrire à l'UCLouvain et qu'ils doivent suivre les règles de l'UCLouvain quant à l'octroi de bourses de voyage de type Erasmus.
+
+Pour la gestion des stages, le partage des tâches entre les deux universités se fait de la façon suivante :
+\begin{itemize}
+  \item La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mobility.sciences@unamur.be}{Mme Carole Payen} 
+  \item L'interface pour la gestion des bourses de mobilité est gérée par l'UCLouvain, par  \href{aloysia.stephenne@uclouvain.be}{Mme Aloysia Stephenne} (qui reçoit les informations directement de Mme Payen, une fois toute la sélection des projets et lieux de stages est terminée)
+\end{itemize}
+
+Les étudiants doivent choisir une des deux finalités du master : approfondie ou didactique. Cette dernière concerne des étudiants désirant enseigner dans le secondaire supérieur à la fin de leur master. Ils doivent réaliser des stages dans les écoles et ne sont pas concernés par le présent guide. Les étudiants en finalité approfondie doivent réaliser un stage de recherche ou professionnel en M2, Q2, comptant pour 28 crédits. Avec le cours de projet professionnel (2 crédits), ils représentent ensemble la totalité des 30 crédits propres à la finalité choisie. Le coordinateur du stage reste une personne de contact privilégiée pour tout problème rencontré par l'étudiant pendant son stage.
+
+# Ce qu'il faut savoir du stage
+
+## Personnes impliquées et responsabilités
+
+D'un point de vue scientifique, les personnes suivantes sont directement impliquées par le stage:
+
+\begin{itemize}
+  \item L'étudiant : choix du stage et réalisation. L'étudiant est responsable pour la réalisation des travaux planifiés, et pour la communication avec l'UNamur / UCLouvain si cette réalisation serait mis en péril par n'importe quelle situation ou évènement ;
+  \item Le maître de stage : la personne qui accueille l'étudiant dans son organisation. Cette personne est responsable pour l'encadrement de l'étudiant et son évaluation à la fin du stage ;
+  \item Le superviseur de stage : un scientifique (typiquement un académique ou chercheur en postdoctorat) de l'UCLouvain, de l'UNamur, ou bien d'une autre institution (mais évidemment pas l'organisation d'acceuil), qui est responsable pour la lecture du rapport intermédiaire et l'identification d'un lecteur pour le rapport final. En cas de problèmes concernant les aspects scientifiques qui sont compliqués à discuter avec le maître de stage, le superviseur de stage sera aussi la personne à contacter. 
+\end{itemize}
+
+## A garder en mémoire
+
+\begin{itemize}
+  \item Le choix du stage est une étape importante qui implique parfois de longues démarches. Il est donc conseillé que l'étudiant commence sa réflexion dès son entrée en master et respecte scrupuleusement les deadlines, à la fois de l'UCLouvain/UNamur, mais également de l'université ou organisation d'accueil.
+  \item Le projet de stage n'est pas nécessairement lié à celui du mémoire (cela peut être une expérience complémentaire ou tout à fait différente). Le choix n'est donc pas obligatoirement soumis à l'approbation du promoteur de mémoire.
+  \item C'est une activité non-payante : l'étudiant ne devra pas accepter de payer des frais d'inscription, ni des frais de fonctionnement. Par contre, il se peut qu'on offre à l'étudiant une gratification (cela peut arriver en France ; cette aide financière ne fait pas perdre à l'étudiant le droit à une bourse Erasmus ou une Bourse d'Etudes de la Communauté Française).
+  \item C'est une activité à temps plein : l'étudiant ne pourra pas suivre des cours (et donc ne pourra s'absenter du lieu de stage pour cela) ; les cours qui devraient être récupérés par des étudiants qui ont réalisé un séjour d'études en master 1, doivent être sélectionnés dans les programmes du Q1 (se concerter avec le responsable d'études de l'étudiant).
+  \item Il faut se méfier des ``volunteer programs'' proposés par certains ONG : il s'agit souvent de travaux peu scientifiques (plutôt axés sur l'aide logistique à une association et l'étudiant peut se retrouver à jouer le "rôle de petites mains"). De plus, l'étudiant doit payer un droit d'inscription et l'entièreté de ce genre de programme est à ses frais.
+  \item Le stage étant une première expérience d'insertion professionnelle (même dans le cas de la finalité approfondie où c'est le métier de chercheur qui est visé par le stage), il est intéressant d'y postuler comme si l'étudiant le faisait pour un job après ses études. Ci-dessous, quelques conseils pratiques à titre indicatif.
+\end{itemize}
+
+## Procédure de candidature à un stage
+
+Le dossier de candidature devrait comprendre un CV et une lettre de motivation.
+
+### CV
+
+Le CV doit se faire, si possible en une page, avec les éléments suivants :
+
+\begin{itemize}
+ \item données ``civiles'' (nom, prénom, lieu et date de naissance, adresse légale, Tél/GSM, e-mail) ;
+ \item formations (universitaires) : citer les grades (les informations à propos des études secondaires ne sont pas cruciales) ;
+ \item le travail personnel de Bac 3 ou toute autre contribution personnelle qui ne serait pas liée au mémoire ;
+ \item le grade en fin de Bac ;
+ \item ``expertise scientifique'' (l'expérience pratique et théorique qui devrait être acquise dans le mémoire ; citer le titre du mémoire, le labo et l'encadrant) ;
+ \item expérience utile (les domaines scientifiques et techniques qui sont familiers à l'étudiant) ;
+ \item autres compétences (p.ex. linguistiques, connaissances de certaines outils informatiques) ;
+ \item profil socio-culturel ou hobbies ou expérience personnelle (mettre en évidence des engagements sociaux et des responsabilités éventuelles dans des mouvements de jeunesses ou autres) ;
+ \item références : coordonnées complètes de deux personnes qui sont d'accord de recommander l'étudiant, le cas échéant, demander leur autorisation avant d'insérer leurs noms et coordonnées complètes.
+\end{itemize}
+
+NB : le CV devra se faire en anglais lorsque la destination de stage est non-francophone. Il faut éviter d'utiliser un CV standard proposé sur Internet.
+
+### Lettre de motivation
+
+Ce document est une sorte de plaidoyer pour l'obtention du stage. Il doit prouver au maître de stage que l'intention de l'étudiant de rejoindre son équipe pour quelques mois est une démarche mûrie (l'étudiant a pris connaissance des activités de l'équipe avant de prendre contact), motivée par un projet personnel de complétion d'une expertise dans un domaine ou d'apprentissage de nouvelles approches pour élargir l'expertise de l'étudiant.
+
+Points-clés à ne pas oublier dans la lettre de motivation :
+\begin{itemize}
+  \item les dates du stage ;
+  \item les motivations scientifiques ou professionnelles du choix du laboratoire ;
+  \item le nom de la personne de l’UNamur qui a éventuellement conseillé cet endroit de stage.
+\end{itemize}
+
+A éviter:
+\begin{itemize}
+  \item adresser le dossier à ``nobody'' (il faut identifier une personne qui se sentira ``reconnue'') ; une candidature adressée à une adresse e-mail ``générale'' a toutes les chances de ne pas être prise en considération, car n'arrivera peut-être pas jusqu'à la personne susceptible de superviser le stage de l'étudiant ;
+  \item ``demander'' si on peut proposer un stage à l'étudiant (il vaut mieux proposer la collaboration de l'étudiant pour un sujet X ou Y décrit dans les activités de l'équipe) ;
+  \item faire passer la motivation scientifique au second plan (i.e. après celle de pouvoir parler une autre langue et/ou de découvrir un autre pays durant le stage, p.ex.).
+\end{itemize}
+
+# Lieu de stage
+
+Lorsque l'étudiant a une idée plus ou moins précise de ce qu'il voudrait faire comme stage, il peut commencer à chercher un lieu de stage. A cette fin, le master BOE préconise une démarche proactive de la part de l'étudiant. Celui-ci peut regarder les publications de son domaine privilégié (en lien ou non avec son mémoire ; par exemple), rechercher les laboratoires sur les sites web des Universités qu'il aimerait visiter, rechercher une entreprise/organisation belge ou étrangère qui l'intéresse, etc. L'étudiant peut aussi demander conseil à ses enseignants, promoteurs et encadrants de mémoire, au coordinateur des stages, etc. Enfin, il peut consulter une liste de stages réalisés par le passé et tenu à jour.
+
+Les lieux de stage peuvent être très divers. Des laboratoires de recherche universitaires ou non, des entreprises publiques ou privées, des bureaux d'étude, des ONG, des associations, etc. Les stages de M2 peuvent théoriquement être effectués n'importe où dans le monde. C'est clairement une opportunité d'enrichir son CV avec une expérience à l'étranger. La seule restriction est que le stage ne peut pas avoir lieu au sein de l'UCLouvain et de l'UNamur. Sans les interdire formellement, nous déconseillons un séjour de recherche dans une autre université de la Communauté Française, le but du stage étant de quitter le contexte habituel autant que faire se peut.
+
+Une fois un stage potentiel identifié, l'étudiant prend contact avec les responsables de l'organisation d'accueil. 
+
+# Proposition de stage et démarche
+
+Le sujet du stage doit être en lien avec le master BOE. On attend de l'étudiant qu'il s'insère dans un milieu professionnel, qu'il y mène un travail de biologiste en situation réelle, conjointement à ses collègues et impliquant une prise de responsabilité au sein de la structure d'accueil. Lorsque l'étudiant a reçu une réponse positive de son maître de stage, il doit contacter \href{frederik.delaender@unamur.be}{Frederik De Laender} par mail pour leur faire part du lieu et du sujet proposé. Si Frederik De Laender donne son accord, l'étudiant peut encoder son choix de stage sur le formulaire dont le lien se trouve sur le site \href{https://masterboe.be}{masterboe.be} (section ``ESPACE ÉTUDIANTS''). A ce moment, les démarches administratives commencent via le coordinateur du stage. Ce dernier prendra contact avec les personnes ressources des organisations d'accueil afin d'effectuer les démarches nécessaires. L'étudiant peut être contacté par le coordinateur des stages pendant cette période.
+
+# Quelles bourses obtenir ?
+
+Il est très important que l'étudiant introduise une demande d'aide financière si son stage se déroule en dehors de la Belgique, au sein de l'Union Européenne, ou en dehors de celle-ci. Une séance d'information est organisée par le coordinateur du stage, typiquement au début de Q2 de M1.
+
+## En Belgique
+
+```{r, echo=FALSE}
+lastoct <- dmy(paste("3110", year(today()),sep=""))
+tosubtr <- ifelse(wday(lastoct)>=5, wday(lastoct)-5, wday(lastoct)+2)
+lastfridayokt <- lastoct %m-% as.period(tosubtr, unit="day")
+lastfridayokt <- paste(day(lastfridayokt),month(lastfridayokt),
+                       year(lastfridayokt), sep="/")
+```
+
+L'introduction officielle pour l'obtention une bourse et pour commencer la rédaction de la convention de stage se fait simplement par remplir le formulaire mentionné dans la section [Proposition de stage et démarche]. Pour ceux désirant partir en Belgique, ce formulaire doit être rempli pour le dernier vendredi d'octobre en M2 (DATE: `r lastfridayokt`). Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour le deuxième vendredi de septembre (en M2), en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
+
+Certaines industries proposent une intervention dans les frais de déplacement (à négocier au cas par cas, après avoir été accepté comme stagiaire).
+
 
