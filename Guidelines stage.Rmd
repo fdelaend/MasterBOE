@@ -45,7 +45,7 @@ convert_to_format <- function(day){
 
 # Introduction
 
-Ce guide pour l'année académique `r paste(academic_year_1, academic_year_2, sep="-")` est destiné aux étudiants en master en biologie des organismes et écologie (BOE). Il reprend les modalités et les dates limites du stage qui est réalisé en deuxième année du master. Abréviations utilisées : M1, M2 : premier et second année du master ; Q1, Q2 : premier et second quadrimestre.
+Ce guide pour l'année académique `r paste(academic_year_1, academic_year_2, sep="-")` est destiné aux étudiants en master en biologie des organismes et écologie (BOE). Il reprend les modalités et les dates limites du stage qui est réalisé en deuxième année du master (départ en `r academic_year_2+1`). Abréviations utilisées : M1, M2 : premier et second année du master ; Q1, Q2 : premier et second quadrimestre.
 
 # Rappels
 
@@ -141,13 +141,13 @@ Il est très important que l'étudiant introduise une demande d'aide financière
 
 ## En Belgique
 
-Pour ceux désirant partir en Belgique, ce formulaire doit être rempli pour le dernier vendredi d'octobre en M2 (DATE: `r get_last_friday(month="10", year=academic_year_2)`). Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (DATE: `r get_last_friday(month="09", year=academic_year_2)`), en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
+Pour ceux désirant partir en Belgique, ce formulaire doit être rempli pour le dernier vendredi d'octobre en M2 (DATE: `r get_last_friday(month="10", year=academic_year_2)`). Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (DATE: `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(2) %m+% days(1))`), en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
 
 Certaines industries proposent une intervention dans les frais de déplacement (à négocier au cas par cas, après avoir été accepté comme stagiaire).
 
 ## En Europe
 
-Pour ceux désirant partir en Europe, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (DATE: `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(2))`). 
+Pour ceux désirant partir en Europe, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (DATE: `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(2) %m+% days(1))`). 
 
 Pour des stages en Europe, il y a une intervention possible du programme Erasmus + (« Bourse- stage »). Les montants des bourses tiennent compte du fait que l’étudiant soit ou non allocataire d'une bourse d'études de la communauté Française. Les montants des bourses sont publiés sur  \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{cette page}.
 
