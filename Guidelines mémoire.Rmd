@@ -134,6 +134,34 @@ L'équipe d'encadrement (promoteur, co-promoteur et/ou encadrant) ne décerne qu
 
 Après la défense, l'étudiant est invité à contacter son promoteur pour avoir un retour sur ses prestations lors de l'année et la défense. 
 
+# Consignes pour la rédaction
 
+## Premiere partie du mémoire
 
+L'objectif est de rédiger un document destiné à situer le cadre général (c.-a.-d., le cadre théorique et conceptuel du mémoire) et à rappeler les notions importantes pour la compréhension des objectifs du mémoire. Ce document synthétique doit être le résultat d'une recherche de la littérature scientifique pertinente au sujet et de plusieurs discussions avec l'encadrant et le promoteur. A la fin du document, les objectifs du mémoire seront développés ; cela est typiquement fait sous forme d'hypothèses. Le style doit être précis, concis mais complet (tous les points principaux), clair, neutre et avec l'esprit critique comme dans les revues scientifiques. Voici les consignes : 
+
+1.   Taille : le corps du texte (sans la liste des références): maximum 7000 mots. Utilisez une police de caractère courant et bien lisible, comme Times 12 pt.
+2.   Langue : français ou anglais. Les fautes d'orthographe seront soigneusement évitées.
+3.   Structure : 
+  *   titre, votre nom, année d'étude, année académique et promoteur
+  *   corps du texte, éventuellement divisé en différentes sections, chacune pourvue d'un titre
+  *   remerciements, s'il y a lieu
+  *   références. La liste des références devrait être formatée d'une manière cohérente. Pour le style, consultez une revue scientifique comme p. ex. Journal of Animal Ecology, Journal of Evolutionary Biology ou Molecular Ecology.
+  *   Figure(s) : il est possible d'inclure des figures, si elles sont pertinentes et utiles pour la compréhension de la problématique. Les étudiants sont encouragés à construire un schéma synthétique qui explique l'ensemble de la problématique abordée et les relations entre ses composantes. 
+4.   Impression : le promoteur décide si l'étudiant doit rendre un exemplaire papier ou si une version électronique est suffisante. En cas d'impression, pensez à l'environnement : impression en recto/verso, reliure pas nécessaire, une trombone ou agrafe suffit.
+
+## Deuxième partie du mémoire
+
+Ce document présentera une introduction, le matériel et les méthodes utilisés, et les principaux résultats de la recherche permettant de répondre, totalement ou partiellement, à la question posée. Enfin, ces résultats seront analysés de manière critique en les situant dans le contexte général de la recherche et en présentant les perspectives qui en découlent.
+
+Il y a deux options pour la rédaction de ce document (spécifiées ci-dessous) :
+
+\textbf{Option 1 (Mémoire classique)} : Le mémoire présentera une limite formelle à 20 000 mots, l'introduction comprise, hors liste des références, résumés, figures et tableaux et annexes éventuelles. Un dépassement de 5% du nombre de mots est acceptable, au-delà de cette limite le promoteur appliquera une pénalité à son évaluation du travail d'étudiant (p. ex. 0,5 points en moins pour chaque tranche de 500 mots excédentaires). Il comprendra deux résumés d'une page qui reprennent le titre du mémoire, l'un en français et l'autre en anglais. Les consignes précises sont :
+
+1. police de caractère Times 12 pt ou semblable et interligne 1.5 ;
+2. figures et tableaux en vis-à-vis du texte et/ou intégrés dans le texte tout en respectant le canevas décrit ci-dessus ;
+3. références bibliographiques en fin de document reprenant les titres complets des articles, et en style soutenu ;
+4. modèle page de couverture. Ce modèle est disponible sur WebCampus, cours MBOE, section ``Mémoire''.
+
+\textbf{Option 2 (Mémoire article scientifique)} : Le mémoire sera rédigé selon les consignes d'une revue scientifique. Des exemples incluent la revue 'Ecology Letters' (pour les sujets écologiques), et la revue 'Evolution' (pour les sujets évolutives). La revue de laquelle l'étudiant(e) suivra les consignes (author guidelines) sera choisie en concertation avec le promoteur, et ces consignes sont trouvable sur internet. En pratique, ceci veut dire : (1) une limite plus restreint (typiquement autour de 5000 mots max.) ; (2) une introduction beaucoup plus succincte ; (3) par contre une annexe plus conséquente (pas inclus dans la limite du nombre de mots) qu'un mémoire classique, vue qu'il n'y aura pas de place pour inclure tous les détails techniques dans le texte principale. Toutefois, le texte principale et l'annexe doivent être combinés dans le même fichier. Juste comme pour le format 'classique', les figures du texte principale doivent être inclues dans le texte principale, même si les consignes de la revue disent autrement. Pareil pour la police de caractère et l'utilisation du modèle page de couverture cfr. annexe A.
 
