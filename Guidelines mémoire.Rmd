@@ -77,7 +77,7 @@ Les promoteurs peuvent encadrer jusqu'à trois mémorants du master BOE la même
 
 # Choix du sujet de mémoire
 
-xxx
+Semaine 6: foire au mémoire.
 
 # Première partie du mémoire (M1, Q2)
 
@@ -101,11 +101,11 @@ L'évaluation du travail ''Initiation de la recherche scientifique'' intervient 
 
 ## Travail
 
-Le travail pratique du mémoire (observations, expériences, calculs) continue très probablement aussi pendant les congés universitaires, en fonction du sujet choisi. La rédaction du mémoire continue avec la description des méthodes. L'analyse des résultats et la rédaction de cette partie du mémoire plus la discussion commencent autour du début de M2, pour se terminer en décembre, à la fin du Q1 ; à ce moment, le mémoire doit en principe être finalisé pour la défense en janvier de M2. Les promoteurs sont donc invités à ajuster leurs exigences et à réunir les conditions nécessaires pour que cette échéance puisse être respectée. Dans le cas où l'étudiant ne réussit pas à terminer la rédaction à temps, la défense sera d'office postposée à la troisième session (août-septembre du M2), sauf si l'étudiant réussit à finaliser et imprimer son mémoire dans sa version définitive avant le début du Q2.
+Le travail pratique du mémoire (observations, expériences, calculs) continue très probablement aussi pendant les congés universitaires, en fonction du sujet choisi. La rédaction du mémoire continue avec la description des méthodes. L'analyse des résultats et la rédaction de cette partie du mémoire plus la discussion commencent autour du début de M2, pour se terminer en décembre, à la fin du Q1 ; à ce moment, le mémoire doit en principe être finalisé pour la défense en janvier de M2. Les promoteurs sont donc invités à ajuster leurs exigences et à réunir les conditions nécessaires pour que cette échéance puisse être respectée. 
 
 L'étudiant doit avoir l'autorisation de son promoteur pour pouvoir déposer son mémoire. Le mémoire doit être déposé au plus tard le premier jour de la session des examens. Seul le président ou secrétaire du jury du master BOE est habilité à apprécier la force majeure responsable d'un dépôt tardif. Déposer le mémoire est fait comme suit : 
 
-*   Dépôt sur le site DIAL.mem de l’UCL, au plus tard à 23h59 le 05/01 (session janvier) ou le 15/08 (session septembre), en suivant scrupuleusement les instructions \href{https://dial.uclouvain.be/memoire/ucl/fr/submit}{sur DIAL.mem} 
+*   Dépôt sur le site DIAL.mem de l’UCL, au plus tard à 23h59 le 05/01 (session janvier), 05/06 (session juin) ou le 15/08 (session septembre), en suivant scrupuleusement les instructions \href{https://dial.uclouvain.be/memoire/ucl/fr/submit}{sur DIAL.mem} 
 *   L'étudiant envoie soit le lien obtenu via DIAL.mem, soit un exemplaire en format pdf à chacun des membres de son jury de mémoire, qui doivent avoir reçu le mémoire au moins 2 semaines avant la défense. Les membres du jury peuvent demander un exemplaire en version papier.
 *  Les étudiants qui réalisent leur mémoire à l'UNamur doivent déposer leur mémoire à la BUMP via \href{ https://www.unamur.be/bump/depot-memoire}{ce lien}.
 
