@@ -109,7 +109,7 @@ Le mémoire doit être déposé au plus tard le premier jour de la session des e
 
 *   Dépôt sur le site DIAL.mem de l’UCL, au plus tard à 23h59 le 05/01 (session janvier), 05/06 (session juin) ou le 15/08 (session septembre), en suivant scrupuleusement les instructions \href{https://dial.uclouvain.be/memoire/ucl/fr/submit}{sur DIAL.mem} 
 *   L'étudiant envoie soit le lien obtenu via DIAL.mem, soit un exemplaire en format pdf à chacun des membres de son jury de mémoire, qui doivent avoir reçu le mémoire au moins 2 semaines avant la défense. Les membres du jury peuvent demander un exemplaire en version papier.
-*  Les étudiants qui réalisent leur mémoire à l'UNamur doivent déposer leur mémoire à la BUMP via \href{ https://www.unamur.be/bump/depot-memoire}{ce lien}.
+*  Les étudiants qui réalisent leur mémoire à l'UNamur doivent aussi déposer leur mémoire à la BUMP via \href{ https://www.unamur.be/bump/depot-memoire}{ce lien}. Attention, le dépôt sur DIAL reste obligatoire. 
 
 L'évaluation du mémoire s'opère sur la base du travail écrit, d'une présentation orale suivie d'une défense évaluée par un jury et de l'évaluation des prestations de l'étudiant pendant l'année par le promoteur (sur base de la grille d'évaluation finale, disponible sur \href{htttps://masterboe.be}{masterboe.be}). Cette grille est en principe confidentielle et son contenu n'est pas communiqué à l'étudiant, mais il peut toujours demander des explications quant à la note finale à son promoteur.
 
