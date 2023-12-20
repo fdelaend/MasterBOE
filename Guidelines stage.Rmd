@@ -190,7 +190,7 @@ Ce rapport intermédiaire contient les éléments suivants:
 
 ## Rapport final
 
-Le rapport final doit comprendre 10 pages et doit comporter les mêmes parties que le rapport intermédiaire. Il pourra comporter des annexes si nécessaires. L'étudiant doit déposer son rapport final (1) en l'envoyant par mail (pdf) à son superviseur et lecteur (le superviseur doit définir un lecteur), et (2) en le déposant sur le site Moodle du cours. Le rapport final est à envoyer le 30/05 (pour les défenses en juin) ou le 15/08 (pour les défenses en septembre). Le court rapport pour le cours de projet professionnel ne sera pas adjoint au rapport final. 
+Le rapport final doit comprendre 10 pages (y-compris les figures et tableaux principales) et doit comporter les mêmes parties que le rapport intermédiaire. Il pourra comporter des annexes si nécessaires. L'étudiant doit déposer son rapport final (1) en l'envoyant par mail (pdf) à son superviseur et lecteur (le superviseur doit définir un lecteur), et (2) en le déposant sur le site Moodle du cours. Le rapport final est à envoyer le 30/05 (pour les défenses en juin) ou le 15/08 (pour les défenses en septembre). Le court rapport pour le cours de projet professionnel ne sera pas adjoint au rapport final. 
 
 Le rapport de stage comprend 3 parties qui sont :
 \begin{itemize}
