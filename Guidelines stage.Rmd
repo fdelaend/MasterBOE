@@ -21,14 +21,14 @@ year <- year(today())
 academic_year_1 <- ifelse(month < 9, year-1, year)
 academic_year_2 <- ifelse(month < 9, year, year+1)
 year_of_departure <- academic_year_2 + 1
-#function to get last friday of some month and year
-#day_month = last day of the month of which we want to know last friday
+#functions to get last friday of some month and year
+#month = month of which we want to know last friday
 #year = year for which we want to know this
 get_last_friday <- function(month="10", year=2023){
   last_of_month <- rollforward(dmy(paste("01", month, year,sep="")))
-  tosubtr <- ifelse(wday(last_of_month)>=5,
-                    wday(last_of_month)-5,
-                    wday(last_of_month)+1)
+  tosubtr <- ifelse(wday(last_of_month)-1>=5,
+                    wday(last_of_month)-1-5,
+                    wday(last_of_month)-1+1)
   last_friday_of_month <- last_of_month %m-% as.period(tosubtr, unit="day")
    convert_to_format(last_friday_of_month)
 }
@@ -36,7 +36,10 @@ get_last_friday <- function(month="10", year=2023){
 convert_to_format <- function(day){
   paste(day(day),month(day), year(day), sep="/")
 }
-
+#compute dates
+deadlineFWB <- convert_to_format(dmy(get_last_friday(month="10", year=academic_year_2)))
+deadlineEUBE <- convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(2))
+deadlineHorsEU <- convert_to_format(dmy(get_last_friday(month="04", year=academic_year_2)) %m-% days(1))
 ```
 
 ```{css, echo=FALSE}
@@ -60,7 +63,7 @@ Les étudiants doivent choisir une des deux finalités du master : approfondie o
 Pour la gestion administrative des stages, le partage des tâches entre les deux universités se fait de la façon suivante :
 
 \begin{itemize}
-  \item La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mailto:mobility.sciences@unamur.be}{Mme Carole Payen}. Tel : +32 (0)81 72 40 98, +32 (0)81 72 54 31. 
+  \item La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mailto:mobility.sciences@unamur.be}{Mme Carole Payen}. Tel : +32 (0)81 72 54 31. 
   \item L'interface pour la gestion des bourses de mobilité est gérée par l'UCLouvain, par  \href{mailto:aloysia.stephenne@uclouvain.be}{Mme Aloysia Stephenne} (qui reçoit les informations directement de Mme Payen, une fois toute la sélection des projets et lieux de stages est terminée)
 \end{itemize}
 
@@ -141,13 +144,13 @@ Il est très important que l'étudiant introduise une demande d'aide financière
 
 ## En Belgique
 
-Pour ceux désirant partir en Wallonie, il faut remplir le formulaire au plus tard `r convert_to_format(dmy(get_last_friday(month="10", year=academic_year_2)))`. Pour des destinations en Flandre, ce formulaire doit être rempli pour au plus tard le deuxième vendredi de Septembre `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(3) %m+% days(1))`. Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (DATE: `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(2) %m+% days(1))`), en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
+Pour ceux désirant partir en Wallonie, il faut remplir le formulaire au plus tard `r deadlineFWB`. Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour le deuxième vendredi de septembre en M2 (`r deadlineEUBE`), en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
 
 Certaines industries proposent une intervention dans les frais de déplacement (à négocier au cas par cas, après avoir été accepté comme stagiaire).
 
 ## En Europe
 
-Pour ceux désirant partir en Europe, le formulaire doit être rempli au plus tard le deuxième vendredi de Septembre `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(3) %m+% days(1))`. 
+Pour ceux désirant partir en Europe, le formulaire doit être rempli au plus tard le deuxième vendredi de Septembre en M2, `r deadlineEUBE`. 
 
 Pour des stages en Europe, il y a une intervention possible du programme Erasmus + (« Bourse- stage »). Les montants des bourses tiennent compte du fait que l’étudiant soit ou non allocataire d'une bourse d'études de la communauté Française. Les montants des bourses sont publiés sur  \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{cette page}.
 
@@ -155,9 +158,9 @@ Si les bourses sont demandées dans les délais fixés, elles sont de manière g
 
 ## Hors Europe
 
-Pour ceux qui désirent partir hors Europe, le formulaire doit être rempli au plus tard le dernier vendredi d'avril de l'année précédant le départ en stage (donc, en M1: DATE: `r get_last_friday(month="04", year=academic_year_2)`). De plus amples informations peuvent être demandés à Mme Payen, voir [Personnes impliquées et responsabilités] et peuvent aussi être trouvées sur \href{https://uclouvain.be/17574.html}{ce site}.  
+Pour ceux qui désirent partir hors Europe, le formulaire doit être rempli au plus tard le dernier vendredi d'avril de l'année précédant le départ en stage (donc, en M1: `r deadlineHorsEU`). De plus amples informations peuvent être demandés à Mme Payen, voir [Personnes impliquées et responsabilités] et peuvent aussi être trouvées sur \href{https://uclouvain.be/17574.html}{ce site}.  
 
-Pour des stages hors Europe, il y a une bourse institutionnelle (BMI), complétée du FAME. Les montants appliqués sont également précisés \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{ici}.   
+Pour des stages hors Europe, il y a une bourse institutionnelle (MERCATOR), complétée du FAME. Les montants appliqués sont également précisés \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{ici}.   
 
 Si les bourses sont demandées dans les délais fixés, elles sont de manière générale toujours octroyées. Dans le rare cas contraire, les étudiants en seront informés. 
 
@@ -280,7 +283,7 @@ Attention: Lorsque le séjour n'a pas atteint une durée minimale de 3 mois, l'�
 
 # Synthèse : timeline du processus
 
-\begin{table}
+\begin{table}[h!]
 \caption{Synthèse du timing}
 \centering
 \begin{tabular}{|p{3in}|p{3in}|}
@@ -293,7 +296,7 @@ Publication du formulaire de choix de stage sur la page WebCampus du cours SBOEM
 \hline
 Les étudiants contactent Frederik De Laender par mail pour présenter leur proposition de lieu de stage, et demander l'aval. Seulement quand la proposition est acceptée peut l'étudiant remplir le formulaire sur WebCampus & Au moins une semaine avant la date limite pour l'encodage dans le formulaire.\\
 \hline
-Les étudiants encodent le sujet dans le formulaire & Si le stage est hors-EU: au plus tard `r get_last_friday(month="04", year=academic_year_2)`; si le stage est en EU ou en Flandre: au plus tard le deuxième vendredi de Septembre `r convert_to_format(dmy(get_last_friday(month="08", year=academic_year_2)) %m+% weeks(3) %m+% days(1))` ; si le stage est en FWB: au plus tard `r convert_to_format(dmy(get_last_friday(month="10", year=academic_year_2)))` \\
+Les étudiants encodent le sujet dans le formulaire & Si le stage est hors-EU: au plus tard `r deadlineHorsEU`; si le stage est en EU ou en Flandre: au plus tard `r deadlineEUBE` ; si le stage est en FWB: au plus tard `r deadlineFWB` \\
 \hline
 Carole Payen envoie les conventions de stage aux étudiants & La convention sera envoyée au plus tard fin octobre, en master 2, pour les étudiants partant à l'étranger, et le 15 décembre pour les départs en Belgique FWB. \\
 \hline
