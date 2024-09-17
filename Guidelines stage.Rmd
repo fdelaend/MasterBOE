@@ -63,8 +63,8 @@ Les étudiants doivent choisir une des deux finalités du master : approfondie o
 Pour la gestion administrative des stages, le partage des tâches entre les deux universités se fait de la façon suivante :
 
 \begin{itemize}
-  \item La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mailto:mobility.sciences@unamur.be}{Mme Carole Payen}. Tel : +32 (0)81 72 54 31. 
-  \item L'interface pour la gestion des bourses de mobilité est gérée par l'UCLouvain, par  \href{mailto:aloysia.stephenne@uclouvain.be}{Mme Aloysia Stephenne} (qui reçoit les informations directement de Mme Payen, une fois toute la sélection des projets et lieux de stages est terminée)
+  \item La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mailto:mobility.sciences@unamur.be}{Le secrétariat Mobility Sciences de l'UNamur}. Tel : +32 (0)81 72 54 31. 
+  \item L'interface pour la gestion des bourses de mobilité est gérée par l'UCLouvain, par  \href{mailto:aloysia.stephenne@uclouvain.be}{Mme Aloysia Stephenne} (qui reçoit les informations directement du secrétariat Mobility Sciences de l'UNamur, une fois toute la sélection des projets et lieux de stages est terminée)
 \end{itemize}
 
 D'un point de vue scientifique, les personnes suivantes sont directement impliquées par le stage:
@@ -136,7 +136,7 @@ Une fois un stage potentiel identifié, l'étudiant prend contact avec les respo
 
 # Proposition de stage et démarche
 
-Le sujet du stage doit être en lien avec le master BOE. On attend de l'étudiant qu'il s'insère dans un milieu professionnel, qu'il y mène un travail de biologiste en situation réelle, conjointement à ses collègues et impliquant une prise de responsabilité au sein de la structure d'accueil. Lorsque l'étudiant a reçu une réponse positive de son maître de stage, il doit contacter \href{mailto:frederik.delaender@unamur.be}{Frederik De Laender} par mail pour leur faire part du lieu et du sujet proposé. Si Frederik De Laender donne son accord, l'étudiant peut encoder son choix de stage sur le formulaire dont le lien se trouve sur la page WebCampus. Cette encodage par l'étudiants est l'introduction officielle pour l'obtention d'une bourse et déclenche la rédaction de la convention de stage. A ce moment, les démarches administratives commencent via le coordinateur du stage. Ce dernier prendra contact avec les personnes ressources des organisations d'accueil afin d'effectuer les démarches nécessaires. L'étudiant peut être contacté par le coordinateur des stages pendant cette période. Une fois que les conventions de stage sont rédigées, les étudiants les recevront de la part de Mme Payen. Un résumé du timeline est inclus à la fin de ce document. 
+Le sujet du stage doit être en lien avec le master BOE. On attend de l'étudiant qu'il s'insère dans un milieu professionnel, qu'il y mène un travail de biologiste en situation réelle, conjointement à ses collègues et impliquant une prise de responsabilité au sein de la structure d'accueil. Lorsque l'étudiant a reçu une réponse positive de son maître de stage, il doit contacter \href{mailto:frederik.delaender@unamur.be}{Frederik De Laender} par mail pour leur faire part du lieu et du sujet proposé. Si Frederik De Laender donne son accord, l'étudiant peut encoder son choix de stage sur le formulaire dont le lien se trouve sur la page WebCampus. Cette encodage par l'étudiants est l'introduction officielle pour l'obtention d'une bourse et déclenche la rédaction de la convention de stage. A ce moment, les démarches administratives commencent via le coordinateur du stage. Ce dernier prendra contact avec les personnes ressources des organisations d'accueil afin d'effectuer les démarches nécessaires. L'étudiant peut être contacté par le coordinateur des stages pendant cette période. Une fois que les conventions de stage sont rédigées, les étudiants les recevront de la part du secrétariat Mobility Sciences de l'UNamur. Un résumé du timeline est inclus à la fin de ce document. 
 
 # Quelles bourses obtenir ?
 
@@ -158,13 +158,13 @@ Si les bourses sont demandées dans les délais fixés, elles sont de manière g
 
 ## Hors Europe
 
-Pour ceux qui désirent partir hors Europe, le formulaire doit être rempli au plus tard le dernier vendredi d'avril de l'année précédant le départ en stage (donc, en M1: `r deadlineHorsEU`). De plus amples informations peuvent être demandés à Mme Payen, voir [Personnes impliquées et responsabilités] et peuvent aussi être trouvées sur \href{https://uclouvain.be/17574.html}{ce site}.  
+Pour ceux qui désirent partir hors Europe, le formulaire doit être rempli au plus tard le dernier vendredi d'avril de l'année précédant le départ en stage (donc, en M1: `r deadlineHorsEU`). De plus amples informations peuvent être demandés au secrétariat Mobility Sciences de l'UNamur, voir [Personnes impliquées et responsabilités] et peuvent aussi être trouvées sur \href{https://uclouvain.be/17574.html}{ce site}.  
 
 Pour des stages hors Europe, il y a une bourse institutionnelle (MERCATOR), complétée du FAME. Les montants appliqués sont également précisés \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{ici}.   
 
 Si les bourses sont demandées dans les délais fixés, elles sont de manière générale toujours octroyées. Dans le rare cas contraire, les étudiants en seront informés. 
 
-Si un étudiant veut changer de destination après l’introduction de son dossier auprès Mme Payen, voici les possibilités : 
+Si un étudiant veut changer de destination après l’introduction de son dossier auprès le secrétariat Mobility Sciences de l'UNamur, voici les possibilités : 
 \begin{itemize}
   \item Une destination EU ne peut pas être transformée en non-EU ;
   \item Une destination non-EU peut être transformée en destination EU, si l'information est donnée avant la deadline pour les introductions de demandes de bourses pour les destinations EU (voir timeline) ;
@@ -298,7 +298,7 @@ Les étudiants contactent Frederik De Laender par mail pour présenter leur prop
 \hline
 Les étudiants encodent le sujet dans le formulaire & Si le stage est hors-EU: au plus tard `r deadlineHorsEU`; si le stage est en EU ou en Flandre: au plus tard `r deadlineEUBE` ; si le stage est en FWB: au plus tard `r deadlineFWB` \\
 \hline
-Carole Payen envoie les conventions de stage aux étudiants & La convention sera envoyée au plus tard fin octobre, en master 2, pour les étudiants partant à l'étranger, et le 15 décembre pour les départs en Belgique FWB. \\
+Le secrétariat Mobility Sciences de l'UNamur envoie les conventions de stage aux étudiants & La convention sera envoyée au plus tard fin octobre, en master 2, pour les étudiants partant à l'étranger, et le 15 décembre pour les départs en Belgique FWB. \\
 \hline
 \end{tabular}
 \end{table}
