@@ -165,7 +165,7 @@ Il y a deux options pour la rédaction de ce document (spécifiées ci-dessous) 
 1. police de caractère Times 12 pt ou semblable et interligne 1.5 ;
 2. figures et tableaux en vis-à-vis du texte et/ou intégrés dans le texte tout en respectant le canevas décrit ci-dessus ;
 3. références bibliographiques en fin de document reprenant les titres complets des articles, et en style soutenu ;
-4. modèle page de couverture. Ce modèle est disponible sur WebCampus, cours MBOE, section ``Mémoire''.
+4. modèle page de couverture. Ce modèle est disponible sur Moodle, cours LBOE2197.
 
 \textbf{Option 2 (Mémoire article scientifique)} : Le mémoire sera rédigé selon les consignes d'une revue scientifique. Des exemples incluent la revue 'Ecology Letters' (pour les sujets écologiques), et la revue 'Evolution' (pour les sujets évolutives). La revue de laquelle l'étudiant(e) suivra les consignes (author guidelines) sera choisie en concertation avec le promoteur, et ces consignes sont trouvable sur internet. En pratique, ceci veut dire : (1) une limite plus restreint (typiquement autour de 5000 mots max.) ; (2) une introduction beaucoup plus succincte ; (3) par contre une annexe plus conséquente (pas inclus dans la limite du nombre de mots) qu'un mémoire classique, vue qu'il n'y aura pas de place pour inclure tous les détails techniques dans le texte principale. Toutefois, le texte principale et l'annexe doivent être combinés dans le même fichier. Juste comme pour le format 'classique', les figures du texte principale doivent être inclues dans le texte principale, même si les consignes de la revue disent autrement. Pareil pour la police de caractère et l'utilisation du modèle page de couverture cfr. annexe A.
 
