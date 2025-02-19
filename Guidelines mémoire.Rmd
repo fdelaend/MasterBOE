@@ -79,7 +79,7 @@ Les promoteurs peuvent encadrer jusqu'à trois mémorants du master BOE la même
 
 Durant la séance d'information (typiquement organisée lors de la rentrée académique), nous invitons les étudiants à indiquer leurs intérêts en terme de sujets de mémoire (via un google form). Ces intérêts sont analysés et envoyés aux professeurs du master BOE, qui peuvent donc les prendre en compte dans la mesure du possible. Après, les promoteurs sont invités à encoder leurs sujets de mémoire. Ces sujets seront ensuite publiés sur Moodle sous forme d'un fichier Excel. 
 
-Mi-octobre (date précise dans ADE) une foire au mémoire est organisée, où les étudiants peuvent poser toute question aux différents professeurs proposant des sujets. L'objectif de cet évènement est d'attribuer (de façon préliminaire) un maximum de sujets aux étudiants, en discutant avec les professeurs et les autres étudiants. A la fin de la semaine 1 de novembre, les étudiants seront invités à encoder de manière officielle leurs choix dans un formulaire. Il sera demandé de fournir trois choix chez trois promoteurs différents. 
+Mi-octobre (date précise dans ADE) une foire au mémoire est organisée, où les étudiants peuvent poser toute question aux différents professeurs proposant des sujets. L'objectif de cet évènement est d'attribuer (de façon préliminaire) un maximum de sujets aux étudiants, en discutant avec les professeurs et les autres étudiants. Les étudiants encodent ce choix directement dans un formulaire, qui reste toutefois ouvert jusqu'à la fin de la semaine 1 de novembre. Il sera demandé de fournir trois choix chez trois promoteurs différents. 
 
 # Première partie du mémoire (M1, Q2)
 
