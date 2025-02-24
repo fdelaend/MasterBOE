@@ -1,0 +1,16 @@
+﻿Key,Description,Date,Commentaire
+IntroBOE,Intro Master BOE,15/09/2025,
+deadlineHorsEU,Remplir formulaire de choix de stage pour un départ hors Europe,25/04/2025,
+deadlineEUBE,Remplir formulaire de choix de stage pour un départ hors-FWB: l'Europe ou la Flandre,13/09/2025,
+deadlineFWB,Remplir formulaire de choix de stage pour un départ en FWB,31/10/2025,
+depart_stage_no_courses,Le plus tôt date de départ au stage,04/02/2026,
+envoie_rapport_intermediaire,Deadline pour l'envoie du rapport intermédiaire au superviseur de stage,,9 mois après le départ
+envoie_rapport_final_jan,"Deadline pour l'envoie du rapport final au superviseur de stage, et au lecteur, pour une défence en janvier",07/01/2026,
+envoie_rapport_final_juin,"Deadline pour l'envoie du rapport final au superviseur de stage, et au lecteur, pour une défence en juin",30/05/2026,
+envoie_rapport_final_august,"Deadline pour l'envoie du rapport final au superviseur de stage, et au lecteur, pour une défence en aout",15/08/2026,
+defenses_stage_jan,"Défences de stage, session de janvier",25/01/2026,
+defenses_stage_juin,"Défences de stage, session de juin",25/06/2026,
+defenses_stage_august,"Défences de stage, session d'aout",25/08/2026,
+IntroStage,"Présentation du stage, coté administrative",28/02/2025,
+PubliFormStage,Publication du formulaire de choix de stage sur la page WebCampus du cours SBOEM240,01/03/2025,
+ContactFDL,"Contacter Frederik De Laender par mail pour présenter la proposition de lieu de stage, et demander son aval",,au moins 1 semaine avant la date limite pour remplir le formulaire de choix de stage

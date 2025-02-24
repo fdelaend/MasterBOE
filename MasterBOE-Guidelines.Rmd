@@ -1,0 +1,244 @@
+---
+title: "MasterBOE : Manuel d'utilisation"
+author: Frederik De Laender, Hans Van Dyck
+output:
+  bookdown::html_document2: 
+   toc: true
+   toc_float: true
+   number_sections: true
+---
+\newpage
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	warning = FALSE,
+	message = FALSE,
+	fig.pos = "H",
+	out.extra = ""
+)
+knitr::opts_chunk$set(fig.pos = "H", out.extra = "")
+library(tidyverse)
+library(lubridate)
+library(knitr)
+
+academic_year_1 <- 2024
+academic_year_2 <- 2025
+
+# deadlines and important dates 
+dates <- read_csv("Deadlines-and-dates.csv") |>
+    arrange(dmy(Date))
+
+```
+
+# Deadlines et dates importantes
+
+```{r dates}
+
+kable(dates |> select(-Key), "pipe")
+
+```
+
+# Le Master BOE
+
+XXX
+
+# Le mémoire
+
+XXX
+
+# Le stage
+
+## Introduction
+
+Vous devez réaliser un stage de recherche ou professionnel en M2, Q2, comptant pour 28 crédits. Avec le cours de projet professionnel (2 crédits), ce cours représente la totalité des 30 crédits propres à la finalité approfondie. Ce poids important dans le cursus BOE signale que le stage est une étape importante qui implique parfois de longues démarches. Il est donc conseillé que l'étudiant commence sa réflexion dès son entrée en master et respecte scrupuleusement les deadlines, à la fois de l'UCLouvain/UNamur, mais également de l'université ou organisation d'accueil.
+
+Le stage est une activité non-payante et à temps plein. L'étudiant ne devra donc pas accepter de payer des frais d'inscription, ni des frais de fonctionnement. Par contre, il se peut qu'on offre à l'étudiant une gratification (cela peut arriver en France.  cette aide financière ne fait pas perdre à l'étudiant le droit à une bourse Erasmus ou une Bourse d'Etudes de la Communauté Française). L'étudiant ne pourra pas suivre des cours (et donc ne pourra s'absenter du lieu de stage pour cela).  les cours qui devraient être récupérés par des étudiants qui ont réalisé un séjour d'études en master 1, doivent être sélectionnés dans les programmes du Q1 (se concerter avec le responsable d'études de l'étudiant).
+
+## Personnes impliquées et responsabilités
+
+Pour la gestion administrative des stages, le partage des tâches entre les deux universités se fait de la façon suivante :
+
+* La gestion du dossier administratif unique de mobilité est gérée à l'UNamur, par \href{mailto:mobility.sciences@unamur.be}{Le secrétariat Mobility Sciences de l'UNamur}. Tel : +32 (0)81 72 54 31. 
+* L'interface pour la gestion des bourses de mobilité est gérée par l'UCLouvain, par  \href{mailto:aloysia.stephenne@uclouvain.be}{Mme Aloysia Stephenne} (qui reçoit les informations directement du secrétariat Mobility Sciences de l'UNamur, une fois toute la sélection des projets et lieux de stages est terminée)
+
+D'un point de vue scientifique, les personnes suivantes sont directement impliquées par le stage:
+
+* L'étudiant : choix du stage et réalisation. L'étudiant est responsable pour la réalisation des travaux planifiés, et pour la communication avec l'UNamur / UCLouvain si cette réalisation serait mis en péril par n'importe quelle situation ou évènement. 
+* Le maître de stage : la personne qui accueille l'étudiant dans son organisation. Cette personne est responsable pour l'encadrement de l'étudiant et son évaluation à la fin du stage
+* Le superviseur de stage : un scientifique (typiquement un académique ou chercheur en postdoctorat) de l'UCLouvain, de l'UNamur, ou bien d'une autre institution (mais évidemment pas l'organisation d'acceuil), qui est responsable pour la lecture du rapport intermédiaire et l'identification d'un lecteur pour le rapport final. En cas de problèmes concernant les aspects scientifiques qui sont compliqués à discuter avec le maître de stage, le superviseur de stage sera aussi la personne à contacter. Ce superviseur ne pourra en aucun cas être le promoteur ou co-promoteur du mémoire de cet étudiant. La commission BOE désigne ce superviseur avant le départ en stage.
+* Le coordinateur du stage, Frederik De Laender, se charge de l'organisation de l'attribution des sujets de stage et leurs défenses. En cas de problème au niveau scientifique il est la personne à contacter. 
+
+## Lieu de stage
+
+Lorsque l'étudiant a une idée plus ou moins précise de ce qu'il voudrait faire comme stage, il peut commencer à chercher un lieu de stage. A cette fin, le master BOE préconise une démarche proactive de la part de l'étudiant. Celui-ci peut regarder les publications de son domaine privilégié, rechercher les laboratoires sur les sites web des Universités qu'il aimerait visiter, rechercher une entreprise/organisation belge ou étrangère qui l'intéresse, etc. L'étudiant peut aussi demander conseil à ses enseignants, promoteurs et encadrants de mémoire, au coordinateur des stages, etc. Enfin, il peut consulter une liste de stages réalisés par le passé et tenu à jour.
+
+Les lieux de stage peuvent être très divers. Des laboratoires de recherche universitaires ou non, des entreprises publiques ou privées, des bureaux d'étude, des ONG, des associations, etc. Les stages peuvent théoriquement être effectués n'importe où dans le monde. C'est clairement une opportunité d'enrichir son CV avec une expérience à l'étranger. La seule restriction est que le stage ne peut pas avoir lieu au sein de l'UCLouvain et de l'UNamur. Sans les interdire formellement, nous déconseillons un séjour de recherche dans une autre université de la Communauté Française, le but du stage étant de quitter le contexte habituel autant que faire se peut.
+
+Le sujet du stage doit être en lien avec le master BOE. On attend de l'étudiant qu'il s'insère dans un milieu professionnel, qu'il y mène un travail de biologiste en situation réelle, conjointement à ses collègues et impliquant une prise de responsabilité au sein de la structure d'accueil. Lorsque l'étudiant a reçu une réponse positive de son maître de stage, il doit contacter \href{mailto:frederik.delaender@unamur.be}{le coordinateur du stage} par mail pour leur faire part du lieu et du sujet proposé. Si le coordinateur du stage donne son accord, l'étudiant peut encoder son choix de stage sur le formulaire dont le lien se trouve sur la page WebCampus. Cette encodage par l'étudiants est l'introduction officielle pour l'obtention d'une bourse et déclenche la rédaction de la convention de stage. A ce moment, les démarches administratives commencent via le coordinateur du stage. Ce dernier prendra contact avec les personnes ressources des organisations d'accueil afin d'effectuer les démarches nécessaires. L'étudiant peut être contacté par le coordinateur des stages pendant cette période. Une fois que les conventions de stage sont rédigées, les étudiants les recevront de la part du secrétariat Mobility Sciences de l'UNamur.  
+
+Lors de la recherche d'un lieu de stage, il faut se méfier des ``volunteer programs'' proposés par certains ONG : il s'agit souvent de travaux peu scientifiques (plutôt axés sur l'aide logistique à une association et l'étudiant peut se retrouver à jouer le "rôle de petites mains"). De plus, l'étudiant doit parfois payer un droit d'inscription et l'entièreté de ce genre de programme est à ses frais.
+
+Une fois un stage potentiel identifié, l'étudiant prend contact avec les responsables de l'organisation d'accueil. A cette fin, elle/il envoie sa candidature au potentiel organisation d'accueil.
+
+## Procédure de candidature à un stage
+
+Le dossier de candidature devrait comprendre un CV et une lettre de motivation.
+
+### CV
+
+Le CV doit se faire avec les éléments suivants :
+
+* données ``civiles'' (nom, prénom, lieu et date de naissance, adresse légale, Tél/GSM, e-mail). 
+* formations (universitaires) : citer les grades (les informations à propos des études secondaires ne sont pas cruciales). 
+* le travail personnel de Bac 3 ou toute autre contribution personnelle qui ne serait pas liée au mémoire. 
+* le grade en fin de Bac. 
+* ``expertise scientifique'' (l'expérience pratique et théorique qui devrait être acquise dans le mémoire.  citer le titre du mémoire, le labo et l'encadrant). 
+* expérience utile (les domaines scientifiques et techniques qui sont familiers à l'étudiant). 
+* autres compétences (p.ex. linguistiques, connaissances de certaines outils informatiques). 
+* profil socio-culturel ou hobbies ou expérience personnelle (mettre en évidence des engagements sociaux et des responsabilités éventuelles dans des mouvements de jeunesses ou autres). 
+* références : coordonnées complètes de deux personnes qui sont d'accord de recommander l'étudiant, le cas échéant, demander leur autorisation avant d'insérer leurs noms et coordonnées complètes.
+
+NB : le CV devra se faire en anglais lorsque la destination de stage est non-francophone. Il faut éviter d'utiliser un CV standard proposé sur Internet.
+
+### Lettre de motivation
+
+Ce document est une sorte de plaidoyer pour l'obtention du stage. Il doit prouver au maître de stage que l'intention de l'étudiant de rejoindre son équipe pour quelques mois est une démarche mûrie (l'étudiant a pris connaissance des activités de l'équipe avant de prendre contact), motivée par un projet personnel de complétion d'une expertise dans un domaine ou d'apprentissage de nouvelles approches pour élargir l'expertise de l'étudiant. Le stage étant une première expérience d'insertion professionnelle, il est intéressant d'y postuler comme si l'étudiant le faisait pour un job après ses études. 
+
+Points-clés à ne pas oublier dans la lettre de motivation :
+
+* les dates du stage
+* les motivations scientifiques ou professionnelles du choix du laboratoire
+* le nom de la personne de l’UNamur qui a éventuellement conseillé cet endroit de stage.
+
+A éviter:
+
+* adresser le dossier à personne (il faut identifier une personne qui se sentira reconnue).  une candidature adressée à une adresse e-mail générale a toutes les chances de ne pas être prise en considération, car n'arrivera peut-être pas jusqu'à la personne susceptible de superviser le stage de l'étudiant. 
+* ``demander'' si on peut proposer un stage à l'étudiant (il vaut mieux proposer la collaboration de l'étudiant pour un sujet X ou Y décrit dans les activités de l'équipe). 
+* faire passer la motivation scientifique au second plan (i.e. après celle de pouvoir parler une autre langue et/ou de découvrir un autre pays durant le stage, p.ex.).
+
+### Quelles bourses obtenir ?
+
+L'étudiant doit introduire une demande d'aide financière. Ces demandes sont automatiquement faits en remplissant le formulaire de choix de stage. Attention qu'il faut remplir ce formulaire bien à l'avance parce que les demandes de bourses sont à introduire longtemps avant le départ en stage. Une séance d'information est organisée par le coordinateur du stage pour expliquer les possibilités, qui sont aussi listés ci-dessous. Si les bourses sont demandées dans les délais fixés, elles sont de manière générale toujours octroyées. Dans le rare cas contraire, les étudiants en seront informés. 
+
+### En Belgique
+
+Pour ceux désirant rester en Belgique, il faut remplir le formulaire au plus tard `r dates |> filter(Key == "deadlineFWB") |> select(Date) |> as.character()`. Il n'y a pas de bourse pour les séjours en Fédération Wallonie-Bruxelles. Par contre, des bourses BELGICA existent pour effectuer un stage en Flandres. Dans ce cas, le formulaire doit être rempli pour `r dates |> filter(Key == "deadlineEUBE") |> select(Date) |> as.character()`, en même temps que les bourses ``Europe''. \href{https://www.stage-entreprise-etudiant.be/haute-ecole-universite/fr/6973-accueil.html}{La plateforme UWE} permet la recherche de stage. 
+
+Certaines industries proposent une intervention dans les frais de déplacement (à négocier au cas par cas, après avoir été accepté comme stagiaire).
+
+### En Europe
+
+Pour ceux désirant partir en Europe, le formulaire doit être rempli au plus tard le `r dates |> filter(Key == "deadlineEUBE") |> select(Date) |> as.character()`. Pour ces stages, il y a une intervention possible du programme Erasmus + (« Bourse- stage »). Les montants des bourses tiennent compte du fait que l’étudiant soit ou non allocataire d'une bourse d'études de la communauté Française. Les montants des bourses sont publiés sur  \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{cette page}.
+
+### Hors Europe
+
+Pour ceux qui désirent partir hors Europe, le formulaire doit être rempli au plus pour le `r deadlineHorsEU`. De plus amples informations peuvent être demandés au secrétariat Mobility Sciences de l'UNamur, voir [Personnes impliquées et responsabilités] et peuvent aussi être trouvées sur \href{https://uclouvain.be/17574.html}{ce site}. Pour ces stages, il y a une bourse institutionnelle (MERCATOR), complétée du FAME. Les montants appliqués sont également précisés \href{https://intranet.uclouvain.be/fr/myucl/administrations/adri/bourses-de-mobilite.html}{ici}.   
+
+Si un étudiant veut changer de destination après l’introduction de son dossier auprès le secrétariat Mobility Sciences de l'UNamur, voici les possibilités : 
+
+* Une destination EU ne peut pas être transformée en non-EU
+* Une destination non-EU peut être transformée en destination EU, si l'information est donnée avant la deadline pour les introductions de demandes de bourses pour les destinations EU
+
+## Quand partir et quand revenir ?
+
+La date de début du stage va dépendre des cours choisis. Si l'étudiant n'a pas de module de cours en M2, Q2, il peut partir dès le `r dates |> filter(Key == "depart_stage_no_courses") |> select(Date) |> as.character()`. S'il lui reste des cours, il doit partir après le dernier cours.
+
+Idéalement l'étudiant est de retour en Belgique avant la défense orale de son stage. L'étudiant souhaitant prolonger son stage ou visiter librement le pays d'accueil peut, sans demander l'accord préalable du jury, soit présenter son stage à distance, soit présenter son stage à la session suivante. Il devra néanmoins prévenir avant le début de la session le coordinateur des stages ainsi que son superviseur académique. 
+
+## Les rapports
+
+L'étudiant doit rendre deux rapports : un rapport intermédiaire et un rapport final. 
+
+### Rapport intermédiaire
+
+Le rapport intermédiaire de 5 pages doit être rendu `r dates |> filter(Key == "envoie_rapport_intermediaire") |> select(Date) |> as.character()`. L'étudiant doit déposer son rapport en l'envoyant par mail (pdf) à son superviseur, qui doit remettre obligatoirement un avis à l'étudiant dans un délai raisonnable, dans le but d'aider l'étudiant à améliorer son travail, si nécessaire. Le superviseur pointera les parties à améliorer pour le rapport final.
+
+Ce rapport intermédiaire contient les éléments suivants:
+
+* description de la structure d'accueil (p.ex. composition de l'équipe, domaines d'expertise, sources de financement des travaux de recherche)
+* une description du travail scientifique réalisé durant le stage (le travail scientifique s'entend au sens large du terme). Une description de la démarche scientifique sera une partie significative du rapport écrit quand le travail est un travail de recherche fondamentale. Les objectifs du travail effectué devront toujours être clairement spécifiés
+* évaluation personnelle qui aborde les points suivants : adéquation entre la formation et le travail proposé, adaptation au sujet et à l'équipe, qualité des conditions de travail et de l'encadrement, analyse critique des apports personnels au travail réalisé (``auto-évaluation'' et mention des points à améliorer)
+* Déclaration IA (100 mots) : Quel outil d'IA générative utilisez-vous (nom et version) ? À quoi avez-vous utilisé l'outil ? 
+
+### Rapport final
+
+L'étudiant doit déposer son rapport final en l'envoyant par mail (pdf) à son superviseur et lecteur (le superviseur doit définir un lecteur). La deadline pour l'envoie du rapport final dépend de la session dans laquelle l'étudiant défend son stage (dates précises spécifiées dans la section [Deadlines et dates importantes]). Ce rapport présente les activités menés jusqu'à ce moment. Il se peut donc que les activités de stage continuent après la soumission du rapport. L'évaluation se fera uniquement sur base du rapport final et ne prendra pas en compte les activités menées après la soumission du rapport. Finalement, le court rapport pour le cours de projet professionnel ne sera pas adjoint au rapport final. 
+
+Le rapport de stage comprend les parties suivantes :
+
+* la description de la structure d'accueil
+* le rapport d'activité
+* l'évaluation personnelle de l'expérience de stage.
+* Déclaration IA (100 mots) : Quel outil d'IA générative utilisez-vous (nom et version) ? À quoi avez-vous utilisé l'outil ? 
+
+Le rapport pourra comporter des annexes si nécessaires. 
+
+Bien que la taille de la deuxième partie soit la plus importante, il ne faut pas négliger le contenu des première et troisième parties. Les deux premières parties du rapport doivent pouvoir être relues et approuvées par le maître de stage. Le rapport sera donc préférentiellement rédigé en anglais, lorsque la structure d'accueil n'est pas francophone. Chacune des parties du rapport est essentielle et un manquement grave dans l'une d'elles peut entraîner l'irrecevabilité du rapport. L'irrecevabilité du rapport est examinée par le jury d'évaluation réuni au moment de la défense orale, à la demande d'au moins un de ses membres. Il entraîne un ajournement et suspend la défense. 
+
+Le corps du texte n'excède pas 10 pages (hors références bibliographiques), afin de donner à l'étudiant l'opportunité de s'exercer à sélectionner l'information essentielle, ainsi que cela se pratique dans le remplissage de formulaires de taille standardisée. Ce rapport concis peut renvoyer à des annexes pour des détails techniques, des résultats préliminaires (ou d'importance secondaire), ou des analyses statistiques. Le style adopté dans le rapport (choix de la police de caractères et de la mise en page) est laissé à l'appréciation de l'étudiant. Pour le confort du lecteur, il est cependant souhaitable de ne pas adopter une trop petite taille de caractère. 
+
+#### Contenu attendu pour la première partie du rapport final
+
+Le contenu attendu de cette section portera sur les éléments suivants :
+
+* Type (Université, Institut de Recherche, Industrie, ou autre)
+* Caractéristiques générales (par exemple, pour une université : la taille, la position dans le classement mondial.  pour une industrie : sa taille, sa spécialité, un bref historique de son évolution/diversification de ses produits, sa position commerciale nationale et internationale). Dans le cas d'une université, il peut être intéressant de mentionner brièvement quelles sont les conditions d'accès aux études et leur coût, lorsque c'est tout à fait différent de notre système.
+* Caractéristiques spécifiques de l'unité d'hébergement du stage : taille et positionnement dans la structure générale; expertise (recherche et/ou développement ou activité de ``service scientifique'' à la société, tels la surveillance et le diagnostic médical); financement des activités (et éventuellement des chercheurs en thèse et/ou en post-doctorat); collaborations nationales et internationales déterminantes; profil des publications (publications et/ou dépôts de brevet et/ou rapports d'activité); conditions particulières éventuelles de travail (laboratoire de haute sécurité.  conditions standardisées du type GLP, GMP; application d'une clause de confidentialité).
+
+#### Contenu attendu pour la deuxième partie du rapport final
+
+* Position de la tâche dans le programme de l'équipe d'accueil (à quel besoin répond-elle ? dans quelle stratégie s'intègre-t-elle ?)
+* Objectifs du travail. Dans le cas d’une recherche fondamentale, dresser une synthèse bibliographique concise sur le sujet et les hypothèses à tester
+* Responsabilités confiées au stagiaire : pour quelles tâches étiez-vous responsables ? Lesquelles étaient portées par vous ? 
+* Moyens mis en œuvre (description du principe des méthodes appliquées.  pour les détails techniques, le lecteur peut être renvoyé vers une publication et/ou une annexe)
+* Description des résultats les plus significatifs (dans le cas où un grand nombre de résultats a été obtenu, opérer une sélection et mettre éventuellement des résultats moins importants en annexe). Veiller à garder les illustrations des principaux résultats décrits à proximité du texte (et non en annexe)
+* Analyse des résultats, y-compris l’utilisation des outils statistiques si les données le permettent.  
+* Des perspectives de travail au sein du lieu de stage.
+
+On note que pas tous les points mentionnés ci-dessus seront toujours pertinents (par exemple, les points sur la méthodologie et description/analyse des résultats s'appliquent plutôt au stages orientés recherche). 
+
+#### Contenu attendu pour la troisième partie du rapport final
+
+L'évaluation personnelle va englober l'analyse critique de certaines caractéristiques de la structure d'accueil. Le stagiaire n'est pas tenu d'en dévoiler le contenu à son maître de stage. Cette évaluation peut contenir les point suivants:
+
+Sur les conditions d'accueil, sur différents plans :
+
+* scientifique (adéquation entre le sujet annoncé et la réalité de terrain). 
+* social (intégration dans l’équipe.  cerner son rôle dans le succès ou les difficultés rencontrées). 
+* techniques (les moyens sont-ils à la hauteur des objectifs ?). 
+* encadrement (fréquence, qualité). 
+* communication (p. ex. régularité des réunions de travail.  accessibilité des personnes ressources).
+
+
+Sur les compétences acquis : Cela peut être basé sur l'exercice d'autoévaluation qui dégagera ses points faibles et ses points forts. Dans cette démarche, l'étudiant sera particulièrement attentif à évaluer son implication personnelle dans :
+
+* la gestion journalière de sa tâche (autonomie/indépendance de décision)
+* l'analyse critique des résultats
+* la mise à jour de la bibliographie sur le sujet de travail
+* les réunions (p.ex. participation constructive aux discutions, préparation d’un poster ou autre communication scientifique)
+* la rédaction du rapport.
+
+Cette troisième partie conclura en citant l'adéquation avec les motivations initiales du choix du sujet et de l'endroit de stage, et l'adéquation entre la préparation lors des études et le travail à réaliser.
+
+## Evaluation
+
+L'évaluation du stage proprement dit se fait sur base du travail réalisé pendant le stage (cote du maître de stage), le rapport écrit final (l'intermédiaire n'entre pas en compte) et sur base d'une défense orale ayant lieu lors de la session de janvier, juin, ou septembre. L'évaluation par le maître de stage se fait par un grille d'évaluation (à trouver sur la page WebCampus du cours SBOEM240), qui doit être rempli et envoyé par le maître de stage au coordinateur du stage. Ce dernier sollicite le grille d'évaluation auprès des maîtres de stage mais c'est la responsabilité de l'étudiant d'informer son maître de stage de cette procédure. Les défenses ont lieu à l'UCLouvain ou à l'UNamur en fonction du superviseur académique. L'étudiant doit présenter sous forme de PowerPoint l'organisation d'accueil (brièvement) ainsi que les résultats de son travail. Cette présentation dure 10 minutes maximum suivie de 10 minutes de discussion. Nous demandons aux étudiants d’apporter un laptop, soit avec une connexion VGA et/ou HDMI, soit avec un connecteur VGA ou HDMI compatible avec l'ordinateur. Une réunion Teams est créé pour permettre aux personnes à distance de suivre la défense. L’étudiant doit donc s’assurer que son ordinateur peut se connecter sur Wifi, qu’elle ou il sait se connecter sur Teams, et dispose du lien de la réunion Teams (spécifié dans l’horaire de passage). 
+
+Le jury est composé de quatre personnes :
+
+* le maître de stage (30\% de la note.  généralement absent de la défense)
+* le superviseur académique (30\% de la note)
+* un lecteur désigné par le superviseur académique et validé par la commission BOE (20\% de la note.  il lit le rapport et assiste à la défense)
+* le coordinateur du stage, qui joue le rôle de modérateur (20\% de la note.  il ne lit pas le rapport mais est présent à toutes les défenses). 
+
+Les étudiants qui sont toujours à l'étranger lors des défenses de stage, peuvent défendre à distance. Dans ce cas, merci d'en avertir le coordinateur du stage lors du dépôt du rapport final. 
+
+## Interruption du stage
+
+En dehors des cas de force majeure (p.ex. accident, maladie, pandémie), un stage peut être interrompu pour des raisons qui touchent à la qualité des conditions locales de travail. L'étudiant stagiaire ne peut cependant pas interrompre le stage sans autorisation préalable de la commission BOE. Cette dernière prendra les renseignements utiles auprès de toutes les parties concernées (stagiaire, maître de stage, coordinateur et superviseur académique du stage). S'il s'avère que le stage ne peut pas se dérouler dans des conditions correctes pour des raisons qui sont indépendante de la bonne volonté manifeste du stagiaire, une autorisation écrite d'interruption du stage sera délivrée au stagiaire.
+
+Attention: Lorsque le séjour n'a pas atteint une durée minimale de 3 mois, l'étudiant perd sa bourse de mobilité et doit rembourser toute avance déjà perçue.
+
+
+
+
